@@ -100,7 +100,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 48
+  controlID: 83
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 55
+  controlID: 17
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,8 +166,8 @@ MonoBehaviour:
     y: 0
     width: 410
     height: 939
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -219,8 +219,8 @@ MonoBehaviour:
     y: 0
     width: 573
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -308,7 +308,7 @@ MonoBehaviour:
     m_SaveData: []
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f65f0000
+    m_SelectedIDs: 
     m_LastClickedID: 24566
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
@@ -485,9 +485,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: b4720000
-      m_LastClickedID: 29364
-      m_ExpandedIDs: b4b6ffffecc8ffff06ccffff62ccffffd4cdffff08d7fffff6e5ffff70e9ffffcae9ffff38fbffff86590000c85900003e64000080640000f47000003c7100009272000002730000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 38fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -607,7 +607,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 266d0000
     m_LastClickedID: 27942
-    m_ExpandedIDs: 00000000785b00007a5b00007c5b00007e5b0000805b0000825b0000845b0000865b0000885b0000
+    m_ExpandedIDs: 000000000e5b0000685b00006a5b00006c5b00006e5b0000705b0000725b0000745b0000765b0000785b00007a5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -635,21 +635,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000785b00007a5b00007c5b00007e5b0000805b0000825b0000845b0000865b0000ba5b0000bc5b0000f65f0000
+    m_ExpandedIDs: ffffffff000000000e5b0000685b00006a5b00006c5b00006e5b0000705b0000725b0000745b0000765b0000785b00007a5b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: MainMixer
-      m_OriginalName: MainMixer
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 24566
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_Rotation:
     m_Target: {x: -0.04858245, y: -0.0029968885, z: -0.00014574139, w: 0.99881107}
     speed: 2
-    m_Value: {x: -0.04858279, y: -0.0014986743, z: -0.00007286784, w: 0.99881804}
+    m_Value: {x: 0.048582446, y: 0.0029968885, z: 0.00014574137, w: -0.998811}
   m_Size:
     m_Target: 4.660193
     speed: 2
