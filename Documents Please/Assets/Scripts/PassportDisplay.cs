@@ -21,10 +21,6 @@ public class PassportDisplay : MonoBehaviour
 		gender.text = passport.gender.ToString();
 		country.text = passport.country;
 		experationDate.text = passport.experationDate;
-
-		//var bounds = photo.sprite.bounds;
-		//var factor = 10 / bounds.size.y;
-		//photo.transform.localScale = new Vector2(factor, factor);
 		photo.sprite = passport.photo;
 	}
 }
