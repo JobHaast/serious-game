@@ -17,3 +17,4 @@ MonoBehaviour:
     my own eyes. '
   source: fakenews.com
   author: Ben Dover
+  isFakeNews: 1

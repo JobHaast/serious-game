@@ -13,5 +13,11 @@ public class LevelScript : MonoBehaviour
         }
 
         Debug.Log("Level " + PlayerPrefs.GetInt("levelsUnlocked") + " unlocked");
+        SceneManager.LoadScene("LevelsScene");
+    }
+
+    public void FinalPass()
+    {
+        SceneManager.LoadScene("LevelsScene");
     }
 }
