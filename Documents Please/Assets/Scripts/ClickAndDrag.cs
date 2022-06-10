@@ -3,7 +3,7 @@ using UnityEngine;
 public class ClickAndDrag : MonoBehaviour
 {
     private bool canMove;
-    private bool dragging;
+    public bool dragging;
     public Collider2D colliderBox;
 
     void Start()
