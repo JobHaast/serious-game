@@ -35,6 +35,8 @@ public class AudioManager : MonoBehaviour
 	}
 	void Start()
 	{
+		float volume = PlayerPrefs.GetFloat("volume", 0);
+		mixerGroup.audioMixer.SetFloat("volume", volume);
 		Play("ThemeAudio");
 	}
 	public void Play(string sound)
