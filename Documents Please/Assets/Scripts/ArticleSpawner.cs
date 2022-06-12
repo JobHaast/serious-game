@@ -5,23 +5,35 @@ public class ArticleSpawner : MonoBehaviour
 {
     public List<NewsArticleDisplay> articlePrefabs;
     private GameObject currentArticle;
-    // Start is called before the first frame update
-    void Start()
+
+    public delegate void OutOfArticles();
+    public static event OutOfArticles outOfArticles;
+
+    void OnEnable()
     {
-        SpawnArticles();
+        DialogueManager.dialogueFinished += SpawnArticle;
+        Approve.articleDestroyed += SpawnArticle;
+        Disapprove.articleDestroyed += SpawnArticle;
     }
-    public void SpawnArticles() 
+
+
+    void OnDisable()
     {
-        int randomIndex = Random.Range(0, articlePrefabs.Count -1);
-        currentArticle = Instantiate(articlePrefabs[randomIndex].gameObject, transform.position, Quaternion.identity);
-        articlePrefabs.RemoveAt(randomIndex);        
+        DialogueManager.dialogueFinished -= SpawnArticle;
+        Approve.articleDestroyed -= SpawnArticle;
+        Disapprove.articleDestroyed -= SpawnArticle;
     }
-    // Update is called once per frame
-    void Update()
+
+    public void SpawnArticle() 
     {
-        if (!currentArticle && articlePrefabs.Count > 0)
+        if (articlePrefabs.Count > 0)
         {
-            SpawnArticles();
-        }
+            int randomIndex = Random.Range(0, articlePrefabs.Count - 1);
+            currentArticle = Instantiate(articlePrefabs[randomIndex].gameObject, transform.position, Quaternion.identity);
+            articlePrefabs.RemoveAt(randomIndex);
+        } else
+        {
+            outOfArticles?.Invoke();
+        }      
     }
 }

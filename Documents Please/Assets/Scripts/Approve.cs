@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Approve : MonoBehaviour
 {
+    public delegate void ArticleDestroyed();
+    public static event ArticleDestroyed articleDestroyed;
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         
@@ -12,6 +15,7 @@ public class Approve : MonoBehaviour
             {
                 Debug.Log("Approved");
                 Destroy(collision.gameObject);
+                articleDestroyed?.Invoke();
             }
 
         }
