@@ -11,5 +11,6 @@ public class NewsArticle : ScriptableObject
     public string source;
     public string author;
     public bool isFakeNews;
+    public int amountOfSubscribers;
 }
 
