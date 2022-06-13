@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b48005d9d87ac6f42bee6259dc44c781, type: 3}
-  m_Name: Aliens in area 51
+  m_Name: Chemtrails
   m_EditorClassIdentifier: 
-  title: Aliens in area 51
-  description: Geloof het of niet maar aliens zijn echt. Ik, Ben D. heb ze met mijn
-    eigen ogen gezien.
-  source: fakenews.com
-  author: Ben Dover
+  title: Chemtrails are real!
+  description: "Contrails zijn bewust vrijlatingen van gif voor kwaadaardige chemicallien
+    uitgestooten door vliegtuigen. Ze doen dit om het weer te be\xEFnvloeden met
+    een vlieftuig."
+  source: elonmuskisthedevil.org
+  author: April Fools
   isFakeNews: 1
   amountOfSubscribers: 100

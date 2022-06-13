@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Karel
+    name: Karel (Assistent)
     sentences:
     - Hallo nieuwe hoofdredacteur en welkom bij Real News. We zijn blij dat je er
       bent!
@@ -912,9 +912,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: articlePrefab
+      value: 
+      objectReference: {fileID: 63582319337097430, guid: 7bf2eb9942799f64794ef3f37b3bba99, type: 3}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: newsArticles.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: articlePrefabs.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: newsArticles.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: e0a4b7e8f3efeb54587cb2c94e68394e, type: 2}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: newsArticles.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 290584cf38422614f91119e790da12c1, type: 2}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: articlePrefabs.Array.data[0]
       value: 
