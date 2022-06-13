@@ -18,3 +18,4 @@ MonoBehaviour:
   source: fakenews.com
   author: Ben Dover
   isFakeNews: 1
+  amountOfSubscribers: 100
