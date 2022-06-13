@@ -1,19 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     public Text nameText;
     public Text dialogueText;
-
     public Animator animator;
-
     private Queue<string> sentences = new();
 
-    public delegate void DialogueFinished();
-    public static event DialogueFinished dialogueFinished;
+    [SerializeField] private UnityEvent dialogueFinished;
 
 
     public void StartDialogue(Dialogue dialogue)

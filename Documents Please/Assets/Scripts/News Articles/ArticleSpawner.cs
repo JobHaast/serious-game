@@ -1,28 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ArticleSpawner : MonoBehaviour
 {
     public List<NewsArticleDisplay> articlePrefabs;
     private GameObject currentArticle;
 
-    public delegate void OutOfArticles();
-    public static event OutOfArticles outOfArticles;
+    [SerializeField] private UnityEvent outOfArticles;
 
-    void OnEnable()
-    {
-        DialogueManager.dialogueFinished += SpawnArticle;
-        Approve.articleDestroyed += SpawnArticle;
-        Disapprove.articleDestroyed += SpawnArticle;
-    }
-
-
-    void OnDisable()
-    {
-        DialogueManager.dialogueFinished -= SpawnArticle;
-        Approve.articleDestroyed -= SpawnArticle;
-        Disapprove.articleDestroyed -= SpawnArticle;
-    }
 
     public void SpawnArticle() 
     {
@@ -35,5 +21,10 @@ public class ArticleSpawner : MonoBehaviour
         {
             outOfArticles?.Invoke();
         }      
+    }
+
+    public void Display(NewsArticle newsArticle)
+    {
+        Debug.Log(newsArticle);
     }
 }

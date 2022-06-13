@@ -3,17 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class LevelScript : MonoBehaviour
 {
-    void OnEnable()
-    {
-        ArticleSpawner.outOfArticles += Pass;
-    }
-
-
-    void OnDisable()
-    {
-        ArticleSpawner.outOfArticles -= Pass;
-    }
-
     public void Pass()
     {
         int currentLevel = SceneManager.GetActiveScene().buildIndex;
