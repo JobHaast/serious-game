@@ -14,7 +14,7 @@ public class Disapprove : MonoBehaviour
             {
                 Debug.Log("Disapproved");
                 Destroy(collision.gameObject);
-                articleDestroyed?.Invoke(collision.gameObject.GetComponent<NewsArticleDisplay>().newsArticle);
+                articleDestroyed?.Invoke(collision.gameObject.GetComponent<NewsArticleDisplay>().newsArticle, false);
             }
 
         }

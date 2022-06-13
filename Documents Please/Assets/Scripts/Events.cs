@@ -1,4 +1,4 @@
 ﻿using System;
 using UnityEngine.Events;
 
-[Serializable] public class ArticleDestroyed : UnityEvent<NewsArticle> { }
+[Serializable] public class ArticleDestroyed : UnityEvent<NewsArticle, bool> { }
