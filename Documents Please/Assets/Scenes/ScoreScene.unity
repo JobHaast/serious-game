@@ -213,6 +213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 154143998}
   - component: {fileID: 154143997}
+  - component: {fileID: 154143999}
   m_Layer: 0
   m_Name: Overview
   m_TagString: Untagged
@@ -287,6 +288,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &154143999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154143996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4450b87fc4e11934c825765fb8d7889b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  previousAmountOfSubscribers: {fileID: 900281973}
+  lostSubscribers: {fileID: 2080064771}
+  newSubscribers: {fileID: 1073866822}
+  newTotalOfSubscribers: {fileID: 1549203798}
+  totalGoodRatedArticles: {fileID: 91639978}
 --- !u!1 &396555021
 GameObject:
   m_ObjectHideFlags: 0
@@ -299,7 +317,7 @@ GameObject:
   - component: {fileID: 396555024}
   - component: {fileID: 396555023}
   m_Layer: 5
-  m_Name: PreviousAbonnees
+  m_Name: PreviousSubscribers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -634,7 +652,7 @@ GameObject:
   - component: {fileID: 900281974}
   - component: {fileID: 900281973}
   m_Layer: 5
-  m_Name: PreviousAbonneesNumber
+  m_Name: PreviousSubscribersNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -714,7 +732,7 @@ GameObject:
   - component: {fileID: 962347594}
   - component: {fileID: 962347593}
   m_Layer: 5
-  m_Name: NewTotalAbonnees
+  m_Name: NewTotalSubscribers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -794,7 +812,7 @@ GameObject:
   - component: {fileID: 1073866823}
   - component: {fileID: 1073866822}
   m_Layer: 5
-  m_Name: NewAbonneesNumber
+  m_Name: NewSubscribersNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1136,7 +1154,7 @@ GameObject:
   - component: {fileID: 1549203799}
   - component: {fileID: 1549203798}
   m_Layer: 5
-  m_Name: NewTotalAbonneesNumber
+  m_Name: NewTotalSubscribersNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1239,7 +1257,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60, y: 300}
+  m_AnchoredPosition: {x: 30, y: 300}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1643647025
@@ -1275,7 +1293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Dag 1
+  m_Text: Overzicht
 --- !u!222 &1643647026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1376,7 +1394,7 @@ GameObject:
   - component: {fileID: 1762294951}
   - component: {fileID: 1762294950}
   m_Layer: 5
-  m_Name: LostAbonnees
+  m_Name: LostSubscribers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1456,7 +1474,7 @@ GameObject:
   - component: {fileID: 2000474538}
   - component: {fileID: 2000474537}
   m_Layer: 5
-  m_Name: NewAbonnees
+  m_Name: NewSubscribers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1536,7 +1554,7 @@ GameObject:
   - component: {fileID: 2080064772}
   - component: {fileID: 2080064771}
   m_Layer: 5
-  m_Name: LostAbonneesNumber
+  m_Name: LostSubscribersNumber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
