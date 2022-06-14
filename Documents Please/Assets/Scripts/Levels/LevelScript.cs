@@ -20,4 +20,9 @@ public class LevelScript : MonoBehaviour
     {
         SceneManager.LoadScene("ScoreScene");
     }
+
+    public void Fail()
+    {
+        SceneManager.LoadScene("FailScene");
+    }
 }
