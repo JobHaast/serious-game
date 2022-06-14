@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b48005d9d87ac6f42bee6259dc44c781, type: 3}
-  m_Name: Netherlands vs Polen
+  m_Name: Nederland Polen Football
   m_EditorClassIdentifier: 
   title: Nederland speelt gelijk tegen Polen (2-2)
   description: "Nederland heeft voor het eerst in deze campagne van de Nations League
