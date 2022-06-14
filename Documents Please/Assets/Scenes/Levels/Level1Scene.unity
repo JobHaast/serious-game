@@ -434,10 +434,10 @@ MonoBehaviour:
     - Hallo nieuwe hoofdredacteur en welkom bij Real News. We zijn blij dat je er
       bent!
     - 'Het gaat de laatste tijd niet zo goed met onze nieuwsredactie. '
-    - Het aantal abbonnees begint namelijk steeds meer af te nemen.
+    - Het aantal abonnees begint namelijk steeds meer af te nemen.
     - Dit komt vooral doordat er veel artikelen worden gepubliceerd die fake news
       bevatten.
-    - Onze lezers zitten hier niet op te wacht.
+    - Onze lezers zitten hier niet op te wachten.
     - Aan jou daarom de taak om de artikelen die vandaag gepubliceerd kunnen worden
       goed of af te keuren.
     - 'Je vraagt je misschien af waarop je een artikel goed of af moet keuren. '
@@ -914,10 +914,10 @@ PrefabInstance:
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: articlePrefab
       value: 
-      objectReference: {fileID: 63582319337097430, guid: 7bf2eb9942799f64794ef3f37b3bba99, type: 3}
+      objectReference: {fileID: 4362681219844492145, guid: be47bad53699bea4ea5ac49759891d23, type: 3}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: newsArticles.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: articlePrefabs.Array.size
@@ -929,6 +929,10 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: e0a4b7e8f3efeb54587cb2c94e68394e, type: 2}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: newsArticles.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: a8b6fccb88b2bd14dbcad0b7b47821f4, type: 2}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: newsArticles.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 290584cf38422614f91119e790da12c1, type: 2}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
@@ -973,7 +977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6387228544965463859, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6387228544965463859, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1170,7 +1174,7 @@ Transform:
   m_Children:
   - {fileID: 1329688001}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725100798
 GameObject:

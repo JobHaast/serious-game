@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b48005d9d87ac6f42bee6259dc44c781, type: 3}
-  m_Name: Chemtrails
+  m_Name: New World Order
   m_EditorClassIdentifier: 
-  title: Chemtrails are real!
-  description: "Contrails zijn bewust vrijlatingen van gif voor kwaadaardige chemicallien
-    uitgestooten door vliegtuigen. Ze doen dit om het weer te be\xEFnvloeden met
-    een vlieftuig."
-  source: elonmuskisthedevil.org
-  author: April Fools
+  title: De nieuwe wereld orde
+  description: "Er is een geheime organisatie van elite die de wereld besturen met
+    een globalistische agenda die samenspant om uiteindelijk de wereld te regeren
+    door middel van een autoritaire \xE9\xE9n-wereld regering - die soevereine natie-staten
+    zal vervangen."
+  source: billgatesisclapped.rs
+  author: Setag Llib
   isFakeNews: 1
   amountOfSubscribers: 100
