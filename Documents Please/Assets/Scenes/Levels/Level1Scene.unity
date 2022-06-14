@@ -359,7 +359,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ed954c68d8fa79c49bd0f514cbaa2a0e, type: 3}
-    m_FontSize: 28
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -476,22 +476,21 @@ MonoBehaviour:
   dialogue:
     name: Karel (Assistent)
     sentences:
-    - Hallo nieuwe hoofdredacteur en welkom bij Real News. We zijn blij dat je er
-      bent!
-    - 'Het gaat de laatste tijd niet zo goed met onze nieuwsredactie. '
-    - Het aantal abonnees begint namelijk steeds meer af te nemen.
+    - Hallo nieuwe hoofdredacteur en welkom bij Real News. Fijn dat je er bent! Het
+      aantal abonnees neemt steeds verder af.
     - Dit komt vooral doordat er veel artikelen worden gepubliceerd die fake news
-      bevatten.
-    - Onze lezers zitten hier niet op te wachten.
-    - Aan jou daarom de taak om de artikelen die vandaag gepubliceerd kunnen worden
-      goed of af te keuren.
-    - 'Je vraagt je misschien af waarop je een artikel goed of af moet keuren. '
-    - Dit is vrij simpel maar kan ingewikkeld worden.
-    - Je moet naar 4 onderdelen kijken van een artikel. Dit zijn de titel, de inhoud,
-      de bron en de auteur.
-    - Klinkt simpel toch?
-    - Ik wens je veel succes en plezier.
-    - Vergeet niet dat de toekomst van Real News van jou afhangt.
+      bevatten. Onze lezers zitten hier niet op te wachten.
+    - 'Aan jou daarom de taak om de artikelen die vandaag gepubliceerd kunnen worden
+      goed of af te keuren. '
+    - 'Dit is vrij simpel maar kan ingewikkeld worden. Je moet naar 4 onderdelen
+      kijken van een artikel. '
+    - Dit zijn de titel, de inhoud, de bron en de auteur.
+    - Telkens verschijnt er een artikel op je bureau die jij naar de goede plek moet
+      slepen.
+    - Er is links een stapel voor artikelen die je wilt publiceren en rechts een
+      prullenbak voor artikelen met fake news.
+    - Klinkt simpel toch? Veel succes! Vergeet niet dat de toekomst van Real News
+      van jou afhangt.
 --- !u!1 &1296063952
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +559,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: ed954c68d8fa79c49bd0f514cbaa2a0e, type: 3}
-    m_FontSize: 22
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -1768,7 +1767,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 163}
-  m_SizeDelta: {x: 520, y: 210}
+  m_SizeDelta: {x: 580, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2121879375
 GameObject:
