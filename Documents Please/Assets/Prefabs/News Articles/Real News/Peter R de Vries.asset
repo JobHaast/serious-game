@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b48005d9d87ac6f42bee6259dc44c781, type: 3}
-  m_Name: New News Article 1
+  m_Name: Peter R de Vries
   m_EditorClassIdentifier: 
   title: Peter R. de Vries geschoten na tv-opname
   description: De bekende Nederlandse misdaadjournalist Peter R. de Vries (64) is
@@ -20,5 +20,5 @@ MonoBehaviour:
     werden drie verdachten opgepakt, onder wie de vermoedelijke schutter.
   source: nieuwsblad.be
   author: Pieter Lood
-  isFakeNews: 1
+  isFakeNews: 0
   amountOfSubscribers: 100
