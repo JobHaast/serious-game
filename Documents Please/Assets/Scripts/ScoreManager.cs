@@ -1,9 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
+    public Text text;
+    private void Start()
+    {
+        int previousAmountOfSubscribers = PlayerPrefs.GetInt("previousAmountOfSubscribers", 0);
+        text.text = (previousAmountOfSubscribers.ToString() + " subscribers");
+    }
+
     public void AddNewOrLostSubscribers(NewsArticle newsArticle, bool approved) 
     {
         if ((newsArticle.isFakeNews && approved) || (!newsArticle.isFakeNews && !approved))
