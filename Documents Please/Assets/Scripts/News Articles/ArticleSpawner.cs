@@ -4,7 +4,8 @@ using UnityEngine.Events;
 
 public class ArticleSpawner : MonoBehaviour
 {
-    public List<NewsArticleDisplay> articlePrefabs;
+    public NewsArticleDisplay articlePrefab;
+    public List<NewsArticle> newsArticles;
     private GameObject currentArticle;
 
     [SerializeField] private UnityEvent outOfArticles;
@@ -12,11 +13,12 @@ public class ArticleSpawner : MonoBehaviour
 
     public void SpawnArticle() 
     {
-        if (articlePrefabs.Count > 0)
+        if (newsArticles.Count > 0)
         {
-            int randomIndex = Random.Range(0, articlePrefabs.Count - 1);
-            currentArticle = Instantiate(articlePrefabs[randomIndex].gameObject, transform.position, Quaternion.identity);
-            articlePrefabs.RemoveAt(randomIndex);
+            int randomIndex = Random.Range(0, newsArticles.Count - 1);
+            articlePrefab.newsArticle = newsArticles[randomIndex];
+            currentArticle = Instantiate(articlePrefab.gameObject, transform.position, Quaternion.identity);
+            newsArticles.RemoveAt(randomIndex);
         } else
         {
             outOfArticles?.Invoke();

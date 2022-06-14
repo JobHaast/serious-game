@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b48005d9d87ac6f42bee6259dc44c781, type: 3}
+  m_Name: New News Article
+  m_EditorClassIdentifier: 
+  title: Corona Pandemie
+  description: "In december 2019 werd in de Chinese miljoenenstad Wuhan een cluster
+    van symptomen van een \"longontsteking van onbekende oorsprong\" waargenomen.
+    In januari werd het virus voor het eerst ge\xEFdentificeerd. Tot oktober 2021
+    raakten wereldwijd meer dan 200 miljoen mensen besmet; meer dan 4,5 miljoen van
+    hen overleden aan de gevolgen van het virus. Sinds 11 maart 2020 wordt de uitbraak
+    van COVID-19 erkend als een pandemie door de WHO."
+  source: telegraaf.nl
+  author: Joris de Graaf
+  isFakeNews: 0
+  amountOfSubscribers: 100

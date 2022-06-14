@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Aliens in area 51
   m_EditorClassIdentifier: 
   title: Aliens in area 51
-  description: 'Believe it or not but aliens are real. I Ben D. have seen it with
-    my own eyes. '
+  description: Geloof het of niet maar aliens zijn echt. Ik, Ben D. heb ze met mijn
+    eigen ogen gezien.
   source: fakenews.com
   author: Ben Dover
   isFakeNews: 1
