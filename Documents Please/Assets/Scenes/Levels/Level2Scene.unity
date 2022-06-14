@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Alwin (Assistent)
+    name: Alwin (ICT'er)
     sentences:
     - 'Hallo hoofdredacteur, ik hoorde dat je goed op weg bent om het aantal abonnees
       weer te laten toenemen. '
