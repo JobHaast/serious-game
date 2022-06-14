@@ -696,7 +696,7 @@ PrefabInstance:
       objectReference: {fileID: 4362681219844492145, guid: be47bad53699bea4ea5ac49759891d23, type: 3}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: newsArticles.Array.size
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: articlePrefabs.Array.size
@@ -722,6 +722,18 @@ PrefabInstance:
       propertyPath: newsArticles.Array.data[4]
       value: 
       objectReference: {fileID: 11400000, guid: 20dedb32f5e567846a00293ec727d980, type: 2}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: newsArticles.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: e0a4b7e8f3efeb54587cb2c94e68394e, type: 2}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: newsArticles.Array.data[6]
+      value: 
+      objectReference: {fileID: 11400000, guid: a8b6fccb88b2bd14dbcad0b7b47821f4, type: 2}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: newsArticles.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: 290584cf38422614f91119e790da12c1, type: 2}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: articlePrefabs.Array.data[0]
       value: 
@@ -1872,7 +1884,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 593628878796906665, guid: afebe894d3981064585703b6ada0a117, type: 3}
       propertyPath: secondsLeft
-      value: 5
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 593628878796906665, guid: afebe894d3981064585703b6ada0a117, type: 3}
       propertyPath: outOfTime.m_PersistentCalls.m_Calls.Array.size
