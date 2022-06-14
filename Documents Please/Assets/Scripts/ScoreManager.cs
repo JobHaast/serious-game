@@ -21,10 +21,15 @@ public class ScoreManager : MonoBehaviour
         else 
         {
             AddNewSubscribers(newsArticle.amountOfSubscribers);
+            AddGoodRatedArticle();
         }
     }
-    
-    
+
+    public void AddGoodRatedArticle() 
+    {
+        int previousAmountOfGoodRatedArticles = PlayerPrefs.GetInt("totalGoodRatedArticles", 0);
+        PlayerPrefs.SetInt("totalGoodRatedArticles", previousAmountOfGoodRatedArticles + 1);
+    }
     public void AddNewSubscribers(int newSubscribers) 
     {
         Debug.Log("New subscribers: " + newSubscribers);
