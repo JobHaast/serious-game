@@ -17,4 +17,15 @@ public class GameManager : MonoBehaviour
         Debug.Log("Exiting game");
         Application.Quit();
     }
+
+    public void ToggleSound(bool toggle)
+    {
+        toggle = !toggle;
+
+        if (toggle)
+            AudioListener.volume = 0.6f;
+
+        else
+            AudioListener.volume = 0f;
+    }
 }
