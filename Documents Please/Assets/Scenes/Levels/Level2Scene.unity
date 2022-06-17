@@ -411,7 +411,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &381294407
 PrefabInstance:
@@ -426,7 +426,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1110,8 +1110,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1318932676}
-        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
+      - m_Target: {fileID: 1977999363}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: AddNewOrLostSubscribers
         m_Mode: 0
         m_Arguments:
@@ -1496,51 +1496,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1318932675
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1318932677}
-  - component: {fileID: 1318932676}
-  m_Layer: 0
-  m_Name: ScoreManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1318932676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318932675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3344e3eb28f6574f8176ab2967d9633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 1575791539}
---- !u!4 &1318932677
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318932675}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1050732, y: -0.4891359, z: -0.3715371}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1384411974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1587,8 +1542,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1318932676}
-        m_TargetAssemblyTypeName: ScoreManager, Assembly-CSharp
+      - m_Target: {fileID: 1977999363}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: AddNewOrLostSubscribers
         m_Mode: 0
         m_Arguments:
@@ -2209,7 +2164,7 @@ GameObject:
   - component: {fileID: 1977999363}
   - component: {fileID: 1977999364}
   m_Layer: 0
-  m_Name: Level
+  m_Name: LevelManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2227,6 +2182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be3c99d230908e54baa57d45d9558915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  text: {fileID: 1575791539}
 --- !u!114 &1977999364
 MonoBehaviour:
   m_ObjectHideFlags: 0
