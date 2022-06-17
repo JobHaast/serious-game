@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New News Article", menuName = "News Article")]
+[CreateAssetMenu(fileName = "New News Article", menuName = "Scriptable Objects/News Article")]
 [Serializable]
 public class NewsArticle : ScriptableObject
 {

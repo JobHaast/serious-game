@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05aaf4288a24cef46b662800d8c12511, type: 3}
+  m_Name: ServiceLocatorConfig
+  m_EditorClassIdentifier: 
+  audioManagerPrefab: {fileID: 2174707902877360568, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
+  databaseManager: {fileID: 11400000, guid: 1fd9caf6d70d9c7499f240dca049c489, type: 2}

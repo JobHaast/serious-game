@@ -4,12 +4,10 @@ using UnityEngine;
 public class NewsArticleDisplay : MonoBehaviour
 {
 	public NewsArticle newsArticle;
-
 	public TextMeshPro title;
 	public TextMeshPro description;
 	public TextMeshPro source;
 	public TextMeshPro author;
-	//public SpriteRenderer photo;
 
 	void Start()
 	{

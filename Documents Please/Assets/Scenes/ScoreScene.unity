@@ -1326,6 +1326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff828fda9c1b94448720837ec11fc47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serviceLocator: {fileID: 11400000, guid: 687bf799c98f29841aaec6303fb57e4a, type: 2}
 --- !u!4 &1487241100
 Transform:
   m_ObjectHideFlags: 0
@@ -1352,7 +1353,7 @@ GameObject:
   - component: {fileID: 1545297233}
   - component: {fileID: 1545297232}
   m_Layer: 0
-  m_Name: Redactie
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

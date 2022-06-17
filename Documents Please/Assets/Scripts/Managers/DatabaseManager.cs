@@ -1,33 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using Mono.Data.Sqlite;
-using System.Data;
 using System;
+using System.Data;
+using UnityEngine;
 
-public class DatabaseManager : MonoBehaviour
+[CreateAssetMenu(fileName = "New Database Manager", menuName = "Scriptable Objects/Database Manager")]
+public class DatabaseManager : ScriptableObject
 {
-    public static DatabaseManager instance;
-    void Awake()
-    {
-        if (instance != null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-    }    
-    // Start is called before the first frame update
-    void Start()
-    {
-        IDbConnection dbConnection = CreateAndOpenDatabase();
+    //public DatabaseManager()
+    //{
+    //    IDbConnection dbConnection = CreateAndOpenDatabase();
         
-        // Remember to always close the connection at the end.
-        dbConnection.Close();
-    }
+    //    // Remember to always close the connection at the end.
+    //    dbConnection.Close();
+    //}
+
+    //void Start()
+    //{
+    //    IDbConnection dbConnection = CreateAndOpenDatabase();
+        
+    //    // Remember to always close the connection at the end.
+    //    dbConnection.Close();
+    //}
 
     public void AddAuthor(NewsArticle newsArticle, bool isFake) 
     {

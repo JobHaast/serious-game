@@ -205,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &469096704
 GameObject:
@@ -574,7 +574,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1196925128
 MonoBehaviour:
@@ -794,6 +794,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97fc384d4b3ccba4bac24c9592b744db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serviceLocator: {fileID: 11400000, guid: 687bf799c98f29841aaec6303fb57e4a, type: 2}
+  disapproveArticleAudioName: PaperShredderEffect
   articleDestroyed:
     m_PersistentCalls:
       m_Calls:
@@ -812,42 +814,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1196925125}
         m_TargetAssemblyTypeName: LevelScript, Assembly-CSharp
         m_MethodName: AddNewOrLostSubscribers
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1835649040}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: PaperShredderEffect
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1966745306}
-        m_TargetAssemblyTypeName: DatabaseManager, Assembly-CSharp
-        m_MethodName: AddAuthor
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1966745306}
-        m_TargetAssemblyTypeName: DatabaseManager, Assembly-CSharp
-        m_MethodName: AddSource
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -938,7 +904,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1329688000
 GameObject:
@@ -1054,7 +1020,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1370645273
 MonoBehaviour:
@@ -1232,6 +1198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ff828fda9c1b94448720837ec11fc47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serviceLocator: {fileID: 11400000, guid: 687bf799c98f29841aaec6303fb57e4a, type: 2}
 --- !u!1 &1412211832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,10 +1208,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1412211833}
-  - component: {fileID: 1412211837}
   - component: {fileID: 1412211836}
   - component: {fileID: 1412211835}
   - component: {fileID: 1412211834}
+  - component: {fileID: 1412211837}
   m_Layer: 5
   m_Name: VolumeOffButton
   m_TagString: Untagged
@@ -1355,8 +1322,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1412211837}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ToggleSound
+        m_TargetAssemblyTypeName: MuteButton, Assembly-CSharp
+        m_MethodName: ToggleAudio
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1399,9 +1366,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1412211832}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff828fda9c1b94448720837ec11fc47, type: 3}
+  m_Script: {fileID: 11500000, guid: 22a89a64d2d9aac44ae33bffcc31bfab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serviceLocator: {fileID: 11400000, guid: 687bf799c98f29841aaec6303fb57e4a, type: 2}
 --- !u!1 &1427723392
 GameObject:
   m_ObjectHideFlags: 0
@@ -1499,7 +1467,7 @@ RectTransform:
   - {fileID: 1998552962}
   - {fileID: 939855499}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1669,6 +1637,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce4a19de8f2eb2542bfcb2764b1b29d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serviceLocator: {fileID: 11400000, guid: 687bf799c98f29841aaec6303fb57e4a, type: 2}
+  approveArticleAudioName: TypeWriterEffect
   articleDestroyed:
     m_PersistentCalls:
       m_Calls:
@@ -1687,42 +1657,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1196925125}
         m_TargetAssemblyTypeName: LevelScript, Assembly-CSharp
         m_MethodName: AddNewOrLostSubscribers
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1835649040}
-        m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
-        m_MethodName: Play
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: TypeWriterEffect
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1966745306}
-        m_TargetAssemblyTypeName: DatabaseManager, Assembly-CSharp
-        m_MethodName: AddAuthor
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1966745306}
-        m_TargetAssemblyTypeName: DatabaseManager, Assembly-CSharp
-        m_MethodName: AddSource
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1824,7 +1758,7 @@ Transform:
   m_Children:
   - {fileID: 1329688001}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1725100798
 GameObject:
@@ -1915,10 +1849,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1729084460}
-  - component: {fileID: 1729084459}
   - component: {fileID: 1729084458}
   - component: {fileID: 1729084457}
   - component: {fileID: 1729084456}
+  - component: {fileID: 1729084461}
   m_Layer: 5
   m_Name: VolumeOnButton
   m_TagString: Untagged
@@ -2008,9 +1942,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1729084459}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: ToggleSound
+      - m_Target: {fileID: 1729084461}
+        m_TargetAssemblyTypeName: MuteButton, Assembly-CSharp
+        m_MethodName: ToggleAudio
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2044,18 +1978,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1729084459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1729084455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ff828fda9c1b94448720837ec11fc47, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1729084460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2076,6 +1998,19 @@ RectTransform:
   m_AnchoredPosition: {x: -10, y: 0}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &1729084461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1729084455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22a89a64d2d9aac44ae33bffcc31bfab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serviceLocator: {fileID: 11400000, guid: 687bf799c98f29841aaec6303fb57e4a, type: 2}
 --- !u!1 &1782224341
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,144 +2196,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1835649039
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2174707902877360568, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_Name
-      value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2174707902877360569, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
---- !u!114 &1835649040 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2174707902877360570, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-  m_PrefabInstance: {fileID: 1835649039}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d00e1f9a303eb89408c050f3565b35be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &1966745305
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2404558382468344597, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_Name
-      value: DatabaseManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1017.6621
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 442.53494
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -14.4369135
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2404558382468344603, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
---- !u!114 &1966745306 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2404558382468344602, guid: 7a342d5f3b944964e9d04ce555c655f0, type: 3}
-  m_PrefabInstance: {fileID: 1966745305}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3f73937657029346b961813171dba93, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1998552958
 GameObject:
   m_ObjectHideFlags: 0
@@ -2564,7 +2363,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2127076192
 GameObject:

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Disapprove : MonoBehaviour
 {
+    public ServiceLocator serviceLocator;
+    public string disapproveArticleAudioName;
     [SerializeField] private ArticleDestroyed articleDestroyed;
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -9,12 +11,18 @@ public class Disapprove : MonoBehaviour
 
         if (collision.CompareTag("Article"))
         {
-            //Debug.Log(collision.gameObject.GetComponent<NewsArticleDisplay>().newsArticle.title);
             if (!collision.gameObject.GetComponent<ClickAndDrag>().dragging)
             {
                 Debug.Log("Disapproved");
                 Destroy(collision.gameObject);
-                articleDestroyed?.Invoke(collision.gameObject.GetComponent<NewsArticleDisplay>().newsArticle, false);
+                serviceLocator.GetAudioManager().Play(disapproveArticleAudioName);
+
+                DatabaseManager databaseManager = serviceLocator.GetDatabaseManager();
+                NewsArticle newsArticle = collision.gameObject.GetComponent<NewsArticleDisplay>().newsArticle;
+
+                databaseManager.AddSource(newsArticle, false);
+                databaseManager.AddAuthor(newsArticle, false);
+                articleDestroyed?.Invoke(newsArticle, false);
             }
 
         }

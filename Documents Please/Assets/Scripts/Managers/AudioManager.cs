@@ -1,29 +1,15 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-	public static AudioManager instance;
-
 	public AudioMixerGroup mixerGroup;
 
 	public Sound[] sounds;
 
 	void Awake()
 	{
-		if (instance != null)
-		{
-			Destroy(gameObject);
-		}
-		else
-		{
-			instance = this;
-			DontDestroyOnLoad(gameObject);
-		}
-
 		foreach (Sound s in sounds)
 		{
 			s.source = gameObject.AddComponent<AudioSource>();
@@ -33,13 +19,15 @@ public class AudioManager : MonoBehaviour
 			s.source.outputAudioMixerGroup = mixerGroup;
 		}
 	}
-	void Start()
-	{
+
+    private void Start()
+    {
 		float volume = PlayerPrefs.GetFloat("volume", 0);
 		mixerGroup.audioMixer.SetFloat("volume", volume);
 		Play("ThemeAudio");
 	}
-	public void Play(string sound)
+
+    public void Play(string sound)
 	{
 		Sound s = Array.Find(sounds, item => item.name == sound);
 		if (s == null)
@@ -52,5 +40,16 @@ public class AudioManager : MonoBehaviour
 		s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
 		s.source.Play();
+	}
+
+	public void ToggleSound(bool toggle)
+	{
+		toggle = !toggle;
+
+		if (toggle)
+			AudioListener.volume = 0.6f;
+
+		else
+			AudioListener.volume = 0f;
 	}
 }
