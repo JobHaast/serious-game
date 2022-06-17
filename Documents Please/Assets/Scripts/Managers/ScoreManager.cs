@@ -5,41 +5,62 @@ using UnityEngine.UI;
 
 public class ScoreManager : MonoBehaviour
 {
-    public Text text;
+    public Text previousAmountOfSubscribers;
+    public Text lostSubscribers;
+    public Text newSubscribers;
+    public Text newTotalOfSubscribers;
+    public Text totalGoodRatedArticles;
+    private int newAmountOfSubscribers;
     private void Start()
     {
-        int previousAmountOfSubscribers = PlayerPrefs.GetInt("previousAmountOfSubscribers", 0);
-        text.text = (previousAmountOfSubscribers.ToString() + " subscribers");
+        SetPreviousAmountSubscribers();
+        SetLostSubscribers();
+        SetNewSubscribers();
+        SetNewTotalSubscribers();
+        SetTotalGoodRatedArticles();
     }
 
-    public void AddNewOrLostSubscribers(NewsArticle newsArticle, bool approved) 
+    private void SetPreviousAmountSubscribers()
     {
-        if ((newsArticle.isFakeNews && approved) || (!newsArticle.isFakeNews && !approved))
-        {
-            AddLostSubscribers(newsArticle.amountOfSubscribers);
-        }
-        else 
-        {
-            AddNewSubscribers(newsArticle.amountOfSubscribers);
-            AddGoodRatedArticle();
-        }
+        var subscribers = PlayerPrefs.GetInt("previousAmountOfSubscribers");
+        previousAmountOfSubscribers.text = subscribers.ToString();
     }
 
-    public void AddGoodRatedArticle() 
+    private void SetLostSubscribers()
     {
-        int previousAmountOfGoodRatedArticles = PlayerPrefs.GetInt("totalGoodRatedArticles", 0);
-        PlayerPrefs.SetInt("totalGoodRatedArticles", previousAmountOfGoodRatedArticles + 1);
+        var subscribers = PlayerPrefs.GetInt("lostSubscribers");
+        lostSubscribers.text = subscribers.ToString();
     }
-    public void AddNewSubscribers(int newSubscribers) 
+
+    private void SetNewSubscribers()
     {
-        Debug.Log("New subscribers: " + newSubscribers);
-        int oldSubscribers = PlayerPrefs.GetInt("newSubscribers", 0);
-        PlayerPrefs.SetInt("newSubscribers", oldSubscribers + newSubscribers);
+        var subscribers = PlayerPrefs.GetInt("newSubscribers");
+        newSubscribers.text = subscribers.ToString();
     }
-    public void AddLostSubscribers(int lostSubscribers)
+
+    private void SetNewTotalSubscribers()
     {
-        Debug.Log("Lost subscribers: " + lostSubscribers);
-        int oldSubscribers = PlayerPrefs.GetInt("lostSubscribers", 0);
-        PlayerPrefs.SetInt("lostSubscribers", oldSubscribers + lostSubscribers);
+        var subscribers = PlayerPrefs.GetInt("previousAmountOfSubscribers");
+        var newSubscribers = PlayerPrefs.GetInt("newSubscribers");
+        var lostSubscribers = PlayerPrefs.GetInt("lostSubscribers");
+        newAmountOfSubscribers = subscribers + newSubscribers - lostSubscribers;
+        newTotalOfSubscribers.text = newAmountOfSubscribers.ToString();
+    }
+
+    private void SetTotalGoodRatedArticles()
+    {
+        var articles = PlayerPrefs.GetInt("totalGoodRatedArticles");
+        totalGoodRatedArticles.text = articles.ToString();
+    }
+    public void SetNewValues() 
+    {
+        PlayerPrefs.SetInt("previousAmountOfSubscribers", newAmountOfSubscribers);
+    }
+    public void ResetValues() 
+    {
+        PlayerPrefs.SetInt("lostSubscribers", 0);
+        PlayerPrefs.SetInt("newSubscribers", 0);
+        PlayerPrefs.SetInt("totalGoodRatedArticles", 0);
+        newAmountOfSubscribers = 0;
     }
 }
