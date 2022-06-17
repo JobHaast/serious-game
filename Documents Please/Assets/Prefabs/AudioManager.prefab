@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7391445936993640476
+--- !u!1 &2174707902877360568
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7391445936993640477}
-  - component: {fileID: 7391445936993640478}
+  - component: {fileID: 2174707902877360569}
+  - component: {fileID: 2174707902877360570}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -17,28 +17,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7391445936993640477
+--- !u!4 &2174707902877360569
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7391445936993640476}
+  m_GameObject: {fileID: 2174707902877360568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3774993, y: 0.08610892, z: 0.11193752}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7391445936993640478
+--- !u!114 &2174707902877360570
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7391445936993640476}
+  m_GameObject: {fileID: 2174707902877360568}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d00e1f9a303eb89408c050f3565b35be, type: 3}
@@ -50,8 +50,35 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 9c701da2fc7648a41b4be604013e9994, type: 3}
     volume: 1
     volumeVariance: 0
-    pitch: 0
+    pitch: 1
     pitchVariance: 0
     loop: 1
+    mixerGroup: {fileID: 24300002, guid: 2b0b058824fb8c5438878cb7f6c94cba, type: 2}
+    source: {fileID: 0}
+  - name: ThemeAudio
+    clip: {fileID: 8300000, guid: 2dfab90d40943674bb5c0975b8428062, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    mixerGroup: {fileID: 24300002, guid: 2b0b058824fb8c5438878cb7f6c94cba, type: 2}
+    source: {fileID: 0}
+  - name: PaperShredderEffect
+    clip: {fileID: 8300000, guid: 342029cab65725f48baa1c1dce368db1, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: 2b0b058824fb8c5438878cb7f6c94cba, type: 2}
+    source: {fileID: 0}
+  - name: TypeWriterEffect
+    clip: {fileID: 8300000, guid: 741db591bc0de594fb99546d24f23816, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
     mixerGroup: {fileID: 24300002, guid: 2b0b058824fb8c5438878cb7f6c94cba, type: 2}
     source: {fileID: 0}
