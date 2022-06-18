@@ -1494,6 +1494,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   databaseManager: {fileID: 2020754543}
+  stackOfPapers: {fileID: 995990762}
+  trashCan: {fileID: 1384411974}
 --- !u!4 &1283427919
 Transform:
   m_ObjectHideFlags: 0

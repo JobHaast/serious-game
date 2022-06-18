@@ -5,21 +5,23 @@ using UnityEngine;
 public class AI : MonoBehaviour
 {
     public DatabaseManager databaseManager;
-    public void CatogorizeArticle(NewsArticleDisplay newsArticleDisplay) 
+    public GameObject stackOfPapers;
+    public GameObject trashCan;
+    public void CatogorizeArticle(GameObject gameObject) 
     {
         //Check database if author is there and return isFake
         //Check database if source is there and return isFake
-        bool? isFake = CheckDatabase(newsArticleDisplay.newsArticle);
+        bool? isFake = CheckDatabase(gameObject.GetComponent<NewsArticleDisplay>().newsArticle);
         //if isFake == true move article to trash can
         //if isFake == false move article to stack of papers
         //if isFake == null player should move article somewhere
         if (isFake == true)
         {
-            MoveArticle(newsArticleDisplay, true);
+            MoveArticle(gameObject, true);
         }
         else if (isFake == false)
         {
-            MoveArticle(newsArticleDisplay, false);
+            MoveArticle(gameObject, false);
         } else
         {
             //player move article somewhere
@@ -42,30 +44,20 @@ public class AI : MonoBehaviour
         }
         return null;
     }
-    private void MoveArticle(NewsArticleDisplay newsArticleDisplay,bool isFake)
+    private void MoveArticle(GameObject gameObject,bool isFake)
     {
+
+        gameObject.GetComponent<ClickAndDrag>().isAI = true;
+        Debug.Log(gameObject.GetComponent<ClickAndDrag>().isAI);
         if (isFake)
         {
             Debug.Log("Move to trash can");
-
-            //move article to trash can
-            newsArticleDisplay.gameObject.GetComponent<ClickAndDrag>().canMove = true;
-
-            Debug.Log(newsArticleDisplay.gameObject.GetComponent<ClickAndDrag>().canMove);
-            newsArticleDisplay.transform.position = Vector2.MoveTowards(newsArticleDisplay.transform.position, new Vector2(100, 200), 10 * Time.deltaTime);
-            //newsArticleDisplay.gameObject.GetComponent<ClickAndDrag>().transform.Translate(Vector2.right * Time.deltaTime * 100);
-            //newsArticleDisplay.transform.Translate(Vector2.right * Time.deltaTime * 100);
+            gameObject.GetComponent<ClickAndDrag>().isFake = true;
         }
-        else 
+        else
         {
             Debug.Log("Move to stack of papers");
-            newsArticleDisplay.gameObject.GetComponent<ClickAndDrag>().canMove = true;
-
-            Debug.Log(newsArticleDisplay.gameObject.GetComponent<ClickAndDrag>().canMove);
-            newsArticleDisplay.transform.position = Vector2.MoveTowards(newsArticleDisplay.transform.position, Vector2.right, 10 * Time.deltaTime);
-            //newsArticleDisplay.gameObject.GetComponent<ClickAndDrag>().transform.Translate(Vector2.left * Time.deltaTime * 100);
-            //newsArticleDisplay.transform.Translate(Vector2.left * Time.deltaTime * 100);
-            //move article to stack of papers
+            gameObject.GetComponent<ClickAndDrag>().isFake = false;
         }
     }
 }
