@@ -19,7 +19,7 @@ public class ArticleSpawner : MonoBehaviour
             articlePrefab.newsArticle = newsArticles[randomIndex];
             Instantiate(articlePrefab.gameObject, transform.position, Quaternion.identity);
             newsArticles.RemoveAt(randomIndex);
-            onArticleSpawned?.Invoke(articlePrefab.newsArticle);
+            onArticleSpawned?.Invoke(articlePrefab);
         } else
         {
             outOfArticles?.Invoke();
