@@ -52,7 +52,7 @@ public class AI : MonoBehaviour
             newsArticleDisplay.gameObject.GetComponent<ClickAndDrag>().canMove = true;
 
             Debug.Log(newsArticleDisplay.gameObject.GetComponent<ClickAndDrag>().canMove);
-            newsArticleDisplay.transform.position = Vector2.MoveTowards(newsArticleDisplay.transform.position, Vector2.right, 10 * Time.deltaTime);
+            newsArticleDisplay.transform.position = Vector2.MoveTowards(newsArticleDisplay.transform.position, new Vector2(100, 200), 10 * Time.deltaTime);
             //newsArticleDisplay.gameObject.GetComponent<ClickAndDrag>().transform.Translate(Vector2.right * Time.deltaTime * 100);
             //newsArticleDisplay.transform.Translate(Vector2.right * Time.deltaTime * 100);
         }
