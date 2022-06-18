@@ -622,7 +622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 607720361}
-  - component: {fileID: 607720359}
+  - component: {fileID: 607720362}
   - component: {fileID: 607720360}
   m_Layer: 0
   m_Name: LevelManager
@@ -631,19 +631,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &607720359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 607720358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be3c99d230908e54baa57d45d9558915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  text: {fileID: 2067649150}
 --- !u!114 &607720360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -683,6 +670,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &607720362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607720358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1fd4e6a8c94a9d4facdde2f6c6bd5cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 2067649150}
 --- !u!224 &640574378 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 593628878796906670, guid: afebe894d3981064585703b6ada0a117, type: 3}
@@ -876,7 +876,7 @@ PrefabInstance:
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: outOfArticles.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 607720359}
+      objectReference: {fileID: 607720362}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: outOfArticles.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -887,7 +887,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: outOfArticles.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelScript, Assembly-CSharp
+      value: LevelManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: outOfArticles.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -1666,7 +1666,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 607720359}
+      - m_Target: {fileID: 607720362}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: AddNewOrLostSubscribers
         m_Mode: 0
@@ -2060,7 +2060,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 607720359}
+      - m_Target: {fileID: 607720362}
         m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
         m_MethodName: AddNewOrLostSubscribers
         m_Mode: 0
@@ -2426,7 +2426,7 @@ PrefabInstance:
     - target: {fileID: 593628878796906665, guid: afebe894d3981064585703b6ada0a117, type: 3}
       propertyPath: outOfTime.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 607720359}
+      objectReference: {fileID: 607720362}
     - target: {fileID: 593628878796906665, guid: afebe894d3981064585703b6ada0a117, type: 3}
       propertyPath: outOfTime.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2437,7 +2437,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 593628878796906665, guid: afebe894d3981064585703b6ada0a117, type: 3}
       propertyPath: outOfTime.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: LevelScript, Assembly-CSharp
+      value: LevelManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 593628878796906665, guid: afebe894d3981064585703b6ada0a117, type: 3}
       propertyPath: outOfTime.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
