@@ -8,6 +8,7 @@ public class ArticleSpawner : MonoBehaviour
     public List<NewsArticle> newsArticles;
 
     [SerializeField] private UnityEvent outOfArticles;
+    [SerializeField] private ArticleSpawned onArticleSpawned;
 
     private void Start()
     {
@@ -20,8 +21,9 @@ public class ArticleSpawner : MonoBehaviour
         {
             int randomIndex = Random.Range(0, newsArticles.Count - 1);
             articlePrefab.newsArticle = newsArticles[randomIndex];
-            Instantiate(articlePrefab.gameObject, transform.position, Quaternion.identity);
+            GameObject gameObject = Instantiate(articlePrefab.gameObject, transform.position, Quaternion.identity);
             newsArticles.RemoveAt(randomIndex);
+            onArticleSpawned?.Invoke(gameObject);
         } else
         {
             outOfArticles?.Invoke();

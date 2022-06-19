@@ -61,32 +61,36 @@ public class DatabaseManager : ScriptableObject
         }
 
     }
-    public void GetAuthor(string author) {
+    public bool? GetAuthor(string author) {
         IDbConnection dbConnection = CreateAndOpenDatabase();
         IDbCommand dbCommandReadValues = dbConnection.CreateCommand();
         dbCommandReadValues.CommandText = "SELECT * FROM Author WHERE author = '" + author + "'";
-        IDataReader dataReader = dbCommandReadValues.ExecuteReader(); 
-
+        IDataReader dataReader = dbCommandReadValues.ExecuteReader();
+        bool isFake;
         while (dataReader.Read()) 
         {
-            
-            Debug.Log(dataReader.GetBoolean(2));
+            isFake = dataReader.GetBoolean(2);
+            return isFake;
+            //Debug.Log(dataReader.GetBoolean(2));
         }
         dbConnection.Close(); 
+        return null;
     }
-    public void GetSource(string source)
+    public bool? GetSource(string source)
     {
         IDbConnection dbConnection = CreateAndOpenDatabase();
         IDbCommand dbCommandReadValues = dbConnection.CreateCommand(); 
         dbCommandReadValues.CommandText = "SELECT * FROM Source WHERE source = '" + source + "'"; 
-        IDataReader dataReader = dbCommandReadValues.ExecuteReader(); 
-
+        IDataReader dataReader = dbCommandReadValues.ExecuteReader();
+        bool isFake;
         while (dataReader.Read()) 
         {
-          
-            Debug.Log(dataReader.GetBoolean(2));
+            isFake = dataReader.GetBoolean(2);
+            return isFake;
+            //Debug.Log(dataReader.GetBoolean(2));
         }
-        dbConnection.Close(); 
+        dbConnection.Close();
+        return null;
     }
     private IDbConnection CreateAndOpenDatabase() 
     {
