@@ -22,12 +22,10 @@ public class AI : MonoBehaviour
         else if (isFake == false)
         {
             MoveArticle(gameObject, false);
-        } else
-        {
-            //player move article somewhere
         }
 
-
+        //player move article
+        return;
     }
     private bool? CheckDatabase(NewsArticle newsArticle) 
     {
@@ -44,20 +42,11 @@ public class AI : MonoBehaviour
         }
         return null;
     }
-    private void MoveArticle(GameObject gameObject,bool isFake)
-    {
 
+    private void MoveArticle(GameObject gameObject, bool isFake)
+    {
         gameObject.GetComponent<ClickAndDrag>().isAI = true;
         Debug.Log(gameObject.GetComponent<ClickAndDrag>().isAI);
-        if (isFake)
-        {
-            Debug.Log("Move to trash can");
-            gameObject.GetComponent<ClickAndDrag>().isFake = true;
-        }
-        else
-        {
-            Debug.Log("Move to stack of papers");
-            gameObject.GetComponent<ClickAndDrag>().isFake = false;
-        }
+        gameObject.GetComponent<ClickAndDrag>().isFake = isFake;
     }
 }

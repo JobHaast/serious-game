@@ -30,8 +30,7 @@ public class ClickAndDrag : MonoBehaviour
             {
                 transform.position = Vector3.MoveTowards(transform.position, GameObject.FindGameObjectWithTag("Approve").transform.position, Time.deltaTime * 5);
             }
-        } else
-        if (Input.GetMouseButtonDown(0))
+        } else if (Input.GetMouseButtonDown(0))
         {
             if (colliderBox == Physics2D.OverlapPoint(mousePos))
             {

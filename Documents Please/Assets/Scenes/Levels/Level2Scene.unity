@@ -1025,6 +1025,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4362681219844492145, guid: be47bad53699bea4ea5ac49759891d23, type: 3}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: serviceLocator
+      value: 
+      objectReference: {fileID: 11400000, guid: 687bf799c98f29841aaec6303fb57e4a, type: 2}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: newsArticles.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -1671,7 +1675,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 593628878796906665, guid: afebe894d3981064585703b6ada0a117, type: 3}
       propertyPath: secondsLeft
-      value: 3
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 593628878796906665, guid: afebe894d3981064585703b6ada0a117, type: 3}
       propertyPath: outOfTime.m_PersistentCalls.m_Calls.Array.size
@@ -2107,11 +2111,12 @@ MonoBehaviour:
       weer te laten toenemen. '
     - Het beoordelen van de artikelen op basis van een aantal criteria lijkt erg
       op hetgeen wat een algoritme ook doet.
-    - Een algoritme is namelijk een eindige reeks stappen in een vaststaande volgorde
-      doorlopen om tot de oplossing of het doel te komen.
+    - Een algoritme is namelijk een reeks stappen in een bepaalde volgorde doorlopen
+      om tot een oplossing of doel te komen.
     - Ik heb een idee! Ik ga een algoritme schrijven die ook artikelen kan beoordelen
       op fake news.
-    - Ik zal jouw keuzes pakken als trainingsmodel.
+    - Ik zal jouw keuzes pakken als trainingsmodel. Maak snel je keuzes want je hebt
+      nu een timer rechtsboven in je scherm.
     - Ik ga snel aan de slag! Succes nog verder!
 --- !u!4 &1977999365
 Transform:

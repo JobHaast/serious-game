@@ -1486,6 +1486,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4362681219844492145, guid: be47bad53699bea4ea5ac49759891d23, type: 3}
     - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
+      propertyPath: serviceLocator
+      value: 
+      objectReference: {fileID: 11400000, guid: 687bf799c98f29841aaec6303fb57e4a, type: 2}
+    - target: {fileID: 6387228544965463858, guid: 853191ce203dd7a4a9b8513de9120ea6, type: 3}
       propertyPath: newsArticles.Array.size
       value: 3
       objectReference: {fileID: 0}

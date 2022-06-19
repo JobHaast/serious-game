@@ -4,6 +4,7 @@ using UnityEngine.Events;
 
 public class ArticleSpawner : MonoBehaviour
 {
+    public ServiceLocator serviceLocator;
     public NewsArticleDisplay articlePrefab;
     public List<NewsArticle> newsArticles;
 
@@ -26,6 +27,7 @@ public class ArticleSpawner : MonoBehaviour
             onArticleSpawned?.Invoke(gameObject);
         } else
         {
+            serviceLocator.GetAIManager().PersistNewsArticles();
             outOfArticles?.Invoke();
         }      
     }

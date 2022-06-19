@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: ServiceLocatorConfig
   m_EditorClassIdentifier: 
   audioManagerPrefab: {fileID: 2174707902877360568, guid: 8e671da05f4a2ac438cc36d034933a4a, type: 3}
-  databaseManager: {fileID: 11400000, guid: 1fd9caf6d70d9c7499f240dca049c489, type: 2}
+  databaseManager: {fileID: 11400000, guid: eaaa4ee55faa9364786ae42c97959d76, type: 2}
+  aiManager: {fileID: 11400000, guid: bbd4b6774d5f3e14cab0bc35c305745c, type: 2}

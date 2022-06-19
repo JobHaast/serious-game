@@ -17,11 +17,8 @@ public class Disapprove : MonoBehaviour
                 Destroy(collision.gameObject);
                 serviceLocator.GetAudioManager().Play(disapproveArticleAudioName);
 
-                DatabaseManager databaseManager = serviceLocator.GetDatabaseManager();
                 NewsArticle newsArticle = collision.gameObject.GetComponent<NewsArticleDisplay>().newsArticle;
-
-                databaseManager.AddSource(newsArticle, false);
-                databaseManager.AddAuthor(newsArticle, false);
+                serviceLocator.GetAIManager().AddNewsArticle(newsArticle, false);
                 articleDestroyed?.Invoke(newsArticle, false);
             }
 

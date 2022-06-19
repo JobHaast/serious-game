@@ -5,6 +5,7 @@ public class ServiceLocator : ScriptableObject
 {
     public GameObject audioManagerPrefab;
     public DatabaseManager databaseManager;
+    public AIManager aiManager;
 
     private AudioManager audioManager;
 
@@ -23,5 +24,10 @@ public class ServiceLocator : ScriptableObject
     public DatabaseManager GetDatabaseManager()
     {
         return databaseManager;
+    }
+
+    public AIManager GetAIManager()
+    {
+        return aiManager;
     }
 }

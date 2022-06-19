@@ -1,66 +1,53 @@
 using Mono.Data.Sqlite;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Text;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Database Manager", menuName = "Scriptable Objects/Database Manager")]
+[CreateAssetMenu(fileName = "New Database Manager", menuName = "Scriptable Objects/Database manager")]
 public class DatabaseManager : ScriptableObject
 {
-    //public DatabaseManager()
-    //{
-    //    IDbConnection dbConnection = CreateAndOpenDatabase();
-        
-    //    // Remember to always close the connection at the end.
-    //    dbConnection.Close();
-    //}
-
-    //void Start()
-    //{
-    //    IDbConnection dbConnection = CreateAndOpenDatabase();
-        
-    //    // Remember to always close the connection at the end.
-    //    dbConnection.Close();
-    //}
-
-    public void AddAuthor(NewsArticle newsArticle, bool isFake) 
-    {
-        try {
-            Debug.Log("Adding author: " + newsArticle.author);
-            // Insert hits into the table.
-            IDbConnection dbConnection = CreateAndOpenDatabase();
-            IDbCommand dbCommandInsertValue = dbConnection.CreateCommand();
-            dbCommandInsertValue.CommandText = "INSERT OR REPLACE INTO Author (author, isFake) VALUES ( '" + newsArticle.author + "', " + !isFake + ")";
-            dbCommandInsertValue.ExecuteNonQuery(); 
-
-            // Remember to always close the connection at the end.
-            dbConnection.Close(); 
-        }
-        catch (Exception e)
-        {
-            Debug.Log(e.Message);
-        }
-        
-    }
-    public void AddSource(NewsArticle newsArticle, bool isFake)
+    public void AddNewsArticles(List<NewsArticle> newsArticles, bool isFake)
     {
         try
         {
-            Debug.Log("Adding source: " + newsArticle.source);
             // Insert hits into the table.
-            IDbConnection dbConnection = CreateAndOpenDatabase(); 
-            IDbCommand dbCommandInsertValue = dbConnection.CreateCommand(); 
-            dbCommandInsertValue.CommandText = "INSERT OR REPLACE INTO Source (source, isFake) VALUES ( '" + newsArticle.source + "', " + !isFake + ")"; 
-            dbCommandInsertValue.ExecuteNonQuery(); 
+            IDbConnection dbConnection = CreateAndOpenDatabase();
+            IDbCommand dbCommandInsertValue = dbConnection.CreateCommand();
+
+            StringBuilder sourcesBuilder = new("INSERT OR REPLACE INTO Source (source, isFake) VALUES ");
+            foreach (NewsArticle newsArticle in newsArticles)
+            {
+                sourcesBuilder.Append("('" + newsArticle.source + "', " + !isFake + "),");
+            }
+            string sourcesQuery = sourcesBuilder.ToString();
+            sourcesQuery = sourcesQuery.Remove(sourcesQuery.Length - 1);
+
+            Debug.Log(sourcesQuery);
+            dbCommandInsertValue.CommandText = sourcesQuery;
+            dbCommandInsertValue.ExecuteNonQuery();
+
+            StringBuilder authorsBuilder = new("INSERT OR REPLACE INTO Author (author, isFake) VALUES ");
+            foreach (NewsArticle newsArticle in newsArticles)
+            {
+                authorsBuilder.Append("('" + newsArticle.author + "', " + !isFake + "),");
+            }
+            string authorsQuery = authorsBuilder.ToString();
+            authorsQuery = authorsQuery.Remove(authorsQuery.Length - 1);
+
+            dbCommandInsertValue.CommandText = authorsQuery;
+            dbCommandInsertValue.ExecuteNonQuery();
 
             // Remember to always close the connection at the end.
-            dbConnection.Close(); 
+            dbConnection.Close();
         }
         catch (Exception e)
         {
             Debug.Log(e.Message);
         }
-
     }
+
     public bool? GetAuthor(string author) {
         IDbConnection dbConnection = CreateAndOpenDatabase();
         IDbCommand dbCommandReadValues = dbConnection.CreateCommand();
@@ -76,6 +63,7 @@ public class DatabaseManager : ScriptableObject
         dbConnection.Close(); 
         return null;
     }
+
     public bool? GetSource(string source)
     {
         IDbConnection dbConnection = CreateAndOpenDatabase();
