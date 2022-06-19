@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,7 +8,9 @@ public class ScoreManager : MonoBehaviour
     public Text newSubscribers;
     public Text newTotalOfSubscribers;
     public Text totalGoodRatedArticles;
+    public Text totalAmountOfArticles;
     private int newAmountOfSubscribers;
+
     private void Start()
     {
         SetPreviousAmountSubscribers();
@@ -18,6 +18,7 @@ public class ScoreManager : MonoBehaviour
         SetNewSubscribers();
         SetNewTotalSubscribers();
         SetTotalGoodRatedArticles();
+        SetTotalAmountOfArticles();
     }
 
     private void SetPreviousAmountSubscribers()
@@ -52,6 +53,14 @@ public class ScoreManager : MonoBehaviour
         var articles = PlayerPrefs.GetInt("totalGoodRatedArticles");
         totalGoodRatedArticles.text = articles.ToString();
     }
+
+    private void SetTotalAmountOfArticles()
+    {
+        var articles = PlayerPrefs.GetInt("totalAmountOfArticles");
+        totalAmountOfArticles.text = articles.ToString();
+    }
+
+
     public void SetNewValues() 
     {
         PlayerPrefs.SetInt("previousAmountOfSubscribers", newAmountOfSubscribers);

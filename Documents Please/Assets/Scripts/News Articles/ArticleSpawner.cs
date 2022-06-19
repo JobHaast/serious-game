@@ -6,10 +6,13 @@ public class ArticleSpawner : MonoBehaviour
 {
     public NewsArticleDisplay articlePrefab;
     public List<NewsArticle> newsArticles;
-    private GameObject currentArticle;
 
     [SerializeField] private UnityEvent outOfArticles;
 
+    private void Start()
+    {
+        PlayerPrefs.SetInt("totalAmountOfArticles", newsArticles.Count);
+    }
 
     public void SpawnArticle() 
     {
@@ -17,7 +20,7 @@ public class ArticleSpawner : MonoBehaviour
         {
             int randomIndex = Random.Range(0, newsArticles.Count - 1);
             articlePrefab.newsArticle = newsArticles[randomIndex];
-            currentArticle = Instantiate(articlePrefab.gameObject, transform.position, Quaternion.identity);
+            Instantiate(articlePrefab.gameObject, transform.position, Quaternion.identity);
             newsArticles.RemoveAt(randomIndex);
         } else
         {
