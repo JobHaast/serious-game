@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class AI : MonoBehaviour
 {
-    public DatabaseManager databaseManager;
+    //public DatabaseManager databaseManager;
+    public ServiceLocator serviceLocator;
     public GameObject stackOfPapers;
     public GameObject trashCan;
+
     public void CatogorizeArticle(GameObject gameObject) 
     {
         //Check database if author is there and return isFake
@@ -31,8 +31,8 @@ public class AI : MonoBehaviour
     }
     private bool? CheckDatabase(NewsArticle newsArticle) 
     {
-        bool? authorIsFake = databaseManager.GetAuthor(newsArticle.author);
-        bool? sourceIsFake = databaseManager.GetSource(newsArticle.source);
+        bool? authorIsFake = serviceLocator.GetDatabaseManager().GetAuthor(newsArticle.author);
+        bool? sourceIsFake = serviceLocator.GetDatabaseManager().GetSource(newsArticle.source);
         
         if (authorIsFake == true && sourceIsFake == true)
         {
