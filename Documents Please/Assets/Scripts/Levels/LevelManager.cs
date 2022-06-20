@@ -53,12 +53,14 @@ public class LevelManager : MonoBehaviour
         int previousAmountOfGoodRatedArticles = PlayerPrefs.GetInt("totalGoodRatedArticles", 0);
         PlayerPrefs.SetInt("totalGoodRatedArticles", previousAmountOfGoodRatedArticles + 1);
     }
+
     public void AddNewSubscribers(int newSubscribers)
     {
         Debug.Log("New subscribers: " + newSubscribers);
         int oldSubscribers = PlayerPrefs.GetInt("newSubscribers", 0);
         PlayerPrefs.SetInt("newSubscribers", oldSubscribers + newSubscribers);
     }
+
     public void AddLostSubscribers(int lostSubscribers)
     {
         Debug.Log("Lost subscribers: " + lostSubscribers);

@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -13,7 +12,6 @@ public class SettingsManager : MonoBehaviour
     public Toggle fullscreenToggle;
     public Slider volumeSlider;
     
-    // Start is called before the first frame update
     void Start()
     {
         resolutions = Screen.resolutions;

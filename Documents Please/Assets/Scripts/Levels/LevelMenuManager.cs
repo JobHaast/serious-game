@@ -7,7 +7,6 @@ public class LevelMenuManager : MonoBehaviour
     private int levelsUnlocked;
     public Button[] buttons;
 
-
     void Start()
     {
         levelsUnlocked = PlayerPrefs.GetInt("levelsUnlocked", 1);
