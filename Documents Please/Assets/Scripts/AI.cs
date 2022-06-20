@@ -29,8 +29,8 @@ public class AI : MonoBehaviour
     }
     private bool? CheckDatabase(NewsArticle newsArticle) 
     {
-        bool? authorIsFake = serviceLocator.GetDatabaseManager().GetAuthor(newsArticle.author);
-        bool? sourceIsFake = serviceLocator.GetDatabaseManager().GetSource(newsArticle.source);
+        bool? authorIsFake = serviceLocator.GetDatabaseManager().IsAuthorFake(newsArticle.author);
+        bool? sourceIsFake = serviceLocator.GetDatabaseManager().IsSourceFake(newsArticle.source);
         
         if (authorIsFake == true && sourceIsFake == true)
         {

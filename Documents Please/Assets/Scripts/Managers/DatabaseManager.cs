@@ -48,7 +48,7 @@ public class DatabaseManager : ScriptableObject
         }
     }
 
-    public bool? GetAuthor(string author) {
+    public bool? IsAuthorFake(string author) {
         IDbConnection dbConnection = CreateAndOpenDatabase();
         IDbCommand dbCommandReadValues = dbConnection.CreateCommand();
         dbCommandReadValues.CommandText = "SELECT * FROM Author WHERE author = '" + author + "'";
@@ -64,7 +64,7 @@ public class DatabaseManager : ScriptableObject
         return null;
     }
 
-    public bool? GetSource(string source)
+    public bool? IsSourceFake(string source)
     {
         IDbConnection dbConnection = CreateAndOpenDatabase();
         IDbCommand dbCommandReadValues = dbConnection.CreateCommand(); 
